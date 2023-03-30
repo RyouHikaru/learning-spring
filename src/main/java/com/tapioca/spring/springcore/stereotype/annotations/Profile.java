@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Profile {
 
-	@Value("Java Architect and Instructor")
+	@Value("Application Developer - Java and Web Technologies")
 	private String title;
 	
 	@Value("IBM Consulting")

@@ -12,14 +12,18 @@ import org.springframework.stereotype.Component;
 public class Instructor {
 
 	// @Value will always override the assignment
-	@Value("10") // Primitive
+	// T(class).method(param) - Spring expression Language
+	@Value("#{T(java.lang.Integer).MIN_VALUE}") // Primitive
 	private int id;
 
-	@Value("Tapioca")
+	@Value("#{new java.lang.String('Tapioca').toUpperCase()}")
 	private String name;
 
 	@Value("#{topics}") // Collections
 	private List<String> topics;
+
+	@Value("#{2 + 4 > 5}")
+	private boolean active;
 
 	@Autowired // Object
 	private Profile profile;
@@ -48,9 +52,26 @@ public class Instructor {
 		this.topics = topics;
 	}
 
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+
+	public Profile getProfile() {
+		return profile;
+	}
+
+	public void setProfile(Profile profile) {
+		this.profile = profile;
+	}
+
 	@Override
 	public String toString() {
-		return "Instructor [id=" + id + ", name=" + name + ", topics=" + topics + ", profile=" + profile + "]";
+		return "Instructor [id=" + id + ", name=" + name + ", topics=" + topics + ", active=" + active + ", profile="
+				+ profile + "]";
 	}
 
 }

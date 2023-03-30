@@ -14,6 +14,7 @@ public class Test {
 
 		Instructor instructor2 = (Instructor) context.getBean("inst");
 		System.out.println(instructor2);
+		
 	}
 
 }
