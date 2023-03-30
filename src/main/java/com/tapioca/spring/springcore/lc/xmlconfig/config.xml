@@ -7,15 +7,8 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-    
-    <!-- Item -->
-    <bean name="item" class="com.tapioca.spring.springcore.assignment.Item" p:id="10" p:name="Flashdrive" p:price="1000" p:quantity="2"/>
-    
-    <!-- ShoppingCart -->
-	<bean name="shoppingcart" class="com.tapioca.spring.springcore.assignment.ShoppingCart" p:item-ref="item"/>
-	
-	<bean name="ticketreservation" class="com.tapioca.spring.springcore.assignment.TicketReservation" p:id="100"/>
-	
-	<context:annotation-config/>
+
+	<bean name="patient" class="com.tapioca.spring.springcore.lc.xmlconfig.Patient" p:id="123" init-method="init" destroy-method="destroy"/>
+
 
 </beans>
