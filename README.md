@@ -2,7 +2,7 @@
 
 A repository dedicated for learning Spring Framework.
 
-This project references the Udemy course, [Spring Framework In Easy Steps](https://www.udemy.com/course/springframeworkineasysteps/).
+This project references the Udemy course, [Spring Framework In Easy Steps](https://www.udemy.com/course/springframeworkineasysteps/) by Bharath Thippireddy.
 
 Inside this repository:
 * Spring Core Concepts
